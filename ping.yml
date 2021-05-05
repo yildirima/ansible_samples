@@ -8,3 +8,4 @@
 
     - name: ping_localhost
       shell: ping -c 1 -w 2 google.com
+      delegate_to: ansiblevm01
