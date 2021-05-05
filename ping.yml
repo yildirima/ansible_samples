@@ -11,6 +11,8 @@
       delegate_to: ansiblevm01
     - name: hostname_run_command
       shell: hostname
+      register: hostname
+    - debug: msg="{{ hostname.stdout }}"
       delegate_to: ansiblevm01
     - name: "curl"
       uri:
@@ -21,3 +23,4 @@
         return_content: yes
       delegate_to: ansiblevm01
       register: webresult
+    - debug: msg="{{ webresult.stdout }}"
