@@ -7,7 +7,7 @@
 
 
     - name: ping_delegate_gw
-      shell: ping -c 1 -w 2 abdurrahim
+      shell: ping -c 1 -w 2 10.6.19.254
       delegate_to: ansiblevm01
     - name: hostname_run_command
       shell: hostname
