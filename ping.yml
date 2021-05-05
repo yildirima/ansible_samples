@@ -1,9 +1,10 @@
 ---
-- hosts: "{{ hostname }}"
+- hosts: localhost
 
   gather_facts: no
 
   tasks:
 
-    - name: ping
-      shell: ping -c 1 -w 2 "{{ destination }}"
+
+    - name: ping_localhost
+      shell: ping -c 1 -w 2 google.com
