@@ -6,7 +6,7 @@
   tasks:
 
     - name: ping_vcenter
-      shell: ping -c 1 -w 2 "{{ vcenter_hostname }}"
+      shell: ping -c 1 -w 2 localhost
       
     - name: VM_DataCenter
       community.vmware.vmware_cluster_info:
