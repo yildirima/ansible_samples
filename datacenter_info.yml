@@ -15,6 +15,8 @@
         password: '{{ lookup("env", "VMWARE_PASSWORD") }}'
         datacenter: '{{ datacenter }}'
         validate_certs: no
+        schema: vsphere
+        properties:
+          - name
+          - summary.totalCpu        
       register: datacenter_info
-      
-    - debug: msg= datacenter_info.stdout
