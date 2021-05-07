@@ -8,15 +8,16 @@
     - name: ping_vcenter
       shell: ping -c 1 -w 2 localhost
 
-    - name: VM_DataCenter
+    - name: Cluster_Info
       community.vmware.vmware_cluster_info:
         hostname: '{{ lookup("env", "VMWARE_HOST") }}'
         username: '{{ lookup("env", "VMWARE_USER") }}'
         password: '{{ lookup("env", "VMWARE_PASSWORD") }}'
-        datacenter: '{{ datacenter }}'
+        cluster_name: '{{ cluster }}'
         validate_certs: no
         schema: vsphere
         properties:
           - name
+          - configuration.dasConfig.enabled
           - summary.totalCpu        
-      register: datacenter_info
+      register: cluster_info
