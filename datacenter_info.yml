@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: ansiblevm01
 
   gather_facts: no
 
@@ -15,5 +15,4 @@
         password: '{{ vcenter_password }}'
         datacenter: '{{ ha-datacenter }}'
         validate_certs: no
-      delegate_to: ansiblevm01
       register: cluster_info
