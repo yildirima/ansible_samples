@@ -7,10 +7,11 @@
 
 
     - name: Gather all VMs from a specific folder
-      community.vmware.vmware_vm_info:
+      community.vmware.vmware_cluster_info:
         hostname: '{{ vcenter_hostname }}'
         username: '{{ vcenter_username }}'
         password: '{{ vcenter_password }}'
         datacenter: '{{ ha-datacenter }}'
+        validate_certs: no
       delegate_to: ansiblevm01
       register: cluster_info
