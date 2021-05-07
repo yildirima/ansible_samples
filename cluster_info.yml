@@ -5,9 +5,6 @@
 
   tasks:
 
-    - name: ping_vcenter
-      shell: ping -c 1 -w 2 localhost
-
     - name: Cluster_Info
       community.vmware.vmware_cluster_info:
         hostname: '{{ lookup("env", "VMWARE_HOST") }}'
