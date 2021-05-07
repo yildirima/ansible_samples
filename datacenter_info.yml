@@ -13,6 +13,6 @@
         hostname: '{{ vcenter_hostname }}'
         username: '{{ vcenter_username }}'
         password: '{{ vcenter_password }}'
-        datacenter: '{{ ha-datacenter }}'
+        datacenter: '{{ datacenter }}'
         validate_certs: no
       register: cluster_info
