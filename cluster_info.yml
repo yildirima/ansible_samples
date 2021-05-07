@@ -14,10 +14,5 @@
         username: '{{ lookup("env", "VMWARE_USER") }}'
         password: '{{ lookup("env", "VMWARE_PASSWORD") }}'
         cluster_name: '{{ cluster }}'
-        validate_certs: no
-        schema: vsphere
-        properties:
-          - name
-          - configuration.dasConfig.enabled
-          - summary.totalCpu        
+        validate_certs: no       
       register: cluster_info
