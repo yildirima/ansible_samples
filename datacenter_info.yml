@@ -16,4 +16,5 @@
         datacenter: '{{ datacenter }}'
         validate_certs: no
       register: datacenter_info
-    - debug: msg="{{ datacenter_info.stdout }}"
+      
+    - debug: msg: '{{ datacenter_info.stdout }}'
