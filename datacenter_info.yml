@@ -12,5 +12,5 @@
         username: '{{ vcenter_username }}'
         password: '{{ vcenter_password }}'
         datacenter: '{{ ha-datacenter }}'
-      delegate_to: localhost
+      delegate_to: ansiblevm01
       register: cluster_info
