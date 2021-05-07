@@ -15,4 +15,5 @@
         password: '{{ lookup("env", "VMWARE_PASSWORD") }}'
         datacenter: '{{ datacenter }}'
         validate_certs: no
-      register: cluster_info
+      register: datacenter_info
+    - debug: msg="{{ datacenter_info.stdout }}"
