@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+
+  gather_facts: no
+
+  tasks:
+
+
+    - name: Gather all VMs from a specific folder
+      community.vmware.vmware_vm_info:
+        hostname: '{{ vcenter_hostname }}'
+        username: '{{ vcenter_username }}'
+        password: '{{ vcenter_password }}'
+        datacenter: '{{ ha-datacenter }}'
+      delegate_to: localhost
+      register: cluster_info
