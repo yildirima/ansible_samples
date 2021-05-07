@@ -6,7 +6,7 @@
   tasks:
 
 
-    - name: Gather all VMs from a specific folder
+    - name: VM_DataCenter
       community.vmware.vmware_cluster_info:
         hostname: '{{ vcenter_hostname }}'
         username: '{{ vcenter_username }}'
